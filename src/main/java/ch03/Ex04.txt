@@ -1,0 +1,6 @@
+java.nio.file.DirectoryStream.Filter<T>
+java.io.FileFilter
+java.io.FilenameFilter
+java.util.logging.Filter
+
+java.io.FileFilter -> dir と name 2つ引数を設定できる
