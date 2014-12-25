@@ -10,7 +10,7 @@ import javafx.beans.property.StringProperty;
 public class Ex03 {
 
 	StringProperty textProp;
-	String text;
+	String text = "default";
 
 	public Ex03(String text) {
 		this.text = text;
@@ -24,8 +24,10 @@ public class Ex03 {
 	}
 
 	public final void setText(String newValue) {
+		if (text.equals(newValue)) {
+			return;
+		}
 		if (textProp == null) {
-			text = newValue;
 			textProp = new SimpleStringProperty(text);
 		} else {
 			textProp.set(newValue);
