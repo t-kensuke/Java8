@@ -1,0 +1,13 @@
+実行結果：
+D:\home\java8\java8>"C:\Program Files\Java\jdk1.8.0_20\bin\jjs"
+jjs> var b = new java.math.BigInteger('1234567890987654321')
+jjs> b
+1234567890987654400
+jjs> b.mod(java.math.BigInteger.TEN)
+1
+jjs> var s = java.lang.String.format("%d", b)
+jjs> s
+1234567890987654321
+
+Q: bはなぜ奇妙に表示されるのか？
+A: オーバーフローしているため
