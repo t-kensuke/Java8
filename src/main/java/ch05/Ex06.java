@@ -10,8 +10,11 @@ public class Ex06 {
 
 	public static void main(String[] args) {
 		LocalDate date = LocalDate.of(1901, 1, 1);
-		for (; date.getYear() < 2000;) {
+		for (;;) {
 			date = date.with(Ex03.next(w -> (w.getDayOfWeek().getValue() == 5 && w.getDayOfMonth() == 13)));
+			if(!(date.getYear() <= 2000)){
+				break;
+			}
 			System.out.println(date);
 		}
 	}

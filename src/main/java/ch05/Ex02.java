@@ -13,7 +13,7 @@ public class Ex02 {
 		LocalDate date = LocalDate.of(2000, 2, 29);
 
 		System.out.println("1:" + date);
-		date = date.plusYears(1);
+		//date = date.plusYears(1);
 
 		//2002-02-28
 		System.out.println("1年を加算:" +  date.plusYears(1));
