@@ -16,6 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 public class Ex06 {
 
@@ -56,14 +57,19 @@ public class Ex06 {
 		});
 
 		// 結果を待つ
-		f.stream().forEach(future -> {
-			try {
-				future.get();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		});
+//		f.stream().forEach(future -> {
+//			try {
+//				future.get();
+//			} catch (Exception e) {
+//				e.printStackTrace();
+//			}
+//		});
 		service.shutdown();
+		try {
+			service.awaitTermination(10, TimeUnit.SECONDS);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return mergeResult;
 	}
 }
