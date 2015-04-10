@@ -16,7 +16,7 @@ public class Ex03 {
 		if (b == 0) {
 			return a;
 		} else {
-			return gcd(b, a % b);
+			return Math.abs(gcd(b, a % b));
 		}
 	}
 
@@ -24,7 +24,7 @@ public class Ex03 {
 		if (b == 0) {
 			return a;
 		} else {
-			return gcdRem(b, rem(a, b));
+			return Math.abs(gcdRem(b, rem(a, b)));
 		}
 	}
 
@@ -32,7 +32,7 @@ public class Ex03 {
 		if (b == 0) {
 			return a;
 		} else {
-			return gcdFloorMod(b, Math.floorMod(a, b));
+			return Math.abs(gcdFloorMod(b, Math.floorMod(a, b)));
 		}
 	}
 
