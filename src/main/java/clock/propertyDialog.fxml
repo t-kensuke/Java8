@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="clock.PropertyDialog">
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Font Family" />
+            <Label text="Font Size" GridPane.rowIndex="1" />
+            <Label text="Font Color" GridPane.rowIndex="2" />
+            <Label text="Background Color" GridPane.rowIndex="3" />
+            <ListView fx:id="fontFamilyList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+            <ListView fx:id="fontSizeList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ListView fx:id="fontColorList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ListView fx:id="backgroundColorList" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Button fx:id="okButton" mnemonicParsing="false" text="OK"  onAction="#handleOKAction"/>
+            <Button fx:id="cancelButton" mnemonicParsing="false" text="Cancel"   onAction="#handleCancelAction"/>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
